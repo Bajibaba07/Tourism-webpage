@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourism Development Homepage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      background: #007BFF;
+      color: white;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    header nav ul li a {
+      font-weight: 500;
+      color: white;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    header nav ul li a:hover {
+      color: #FFD700;
+    }
+
+    .cta-button {
+      background: #FFD700;
+      color: #007BFF;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #FFA500;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 80px 0;
+      text-align: center;
+      display: none;  /* Initially hidden */
+    }
+
+    section.active {
+      display: block;  /* Show only the active section */
+    }
+
+    section h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin: 15px 0;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .card button {
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .card button:hover {
+      background: #0056b3;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: white;
+      padding: 40px 0;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer ul li {
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      color: #ccc;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #007BFF;
+    }
+  </style>
+</head>
+
+<body>
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
+
+<!-- Header -->
+<header>
+  <div class="container">
+    <div class="logo">ExploreWorld</div>
+    <nav>
+      <ul>
+        <li><a onclick="showSection('home')">Home</a></li>
+        <li><a onclick="showSection('destinations')">Destinations</a></li>
+        <li><a onclick="redirectTo('tours.html')">Tours</a></li>
+        <li><a  onclick="redirectTo('about.html')" >About Us</a></li>
+      </ul>
+    </nav>
+    <button class="cta-button" onclick="redirectTo('login page.html')">Book Now</button>
+  </div>
+</header>
+
+<!-- Home Section (7 Wonders of the World) -->
+<section id="home" class="active">
+  <div class="container">
+    <h2>7 Wonders of the World 🌎</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://lh3.googleusercontent.com/ci/AL18g_RKj4JvDP7lo2CkLbDpSJPumLRCakgOMzFqpWvOZbtYPZrlq8IoDw9zcm_hPMYrLHZhJZUIGg=s1200" onclick="redirectTo('gratewall of china.html')"> alt="Great Wall of China">
+        <h3>Great Wall of China</h3>
+        <p>A magnificent structure stretching over 13,000 miles.</p>
+      </div>
+      <div class="card">
+        <img src="https://media.tacdn.com/media/attractions-content--1x-1/12/75/5d/62.jpg" onclick="redirectTo('petra.html')" alt="Petra, Jordan">
+        <h3>Petra, Jordan</h3>
+        <p>An ancient city carved into pink sandstone cliffs.</p>
+      </div>
+      <div class="card">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/e4/12/c9/visao-privilegiada.jpg?w=600&h=400&s=1" onclick="redirectTo('christ.html')" alt="Christ the Redeemer">
+        <h3>Christ the Redeemer, Brazil</h3>
+        <p>A colossal statue overlooking Rio de Janeiro.</p>
+      </div>
+      <div class="card">
+        <img src="https://news.yale.edu/sites/default/files/styles/full/public/ynews-machu_picchu_peru-wiki.jpg?itok=2UrS7Hw8" onclick="redirectTo('machupichu.html')" alt="Machu Picchu">
+        <h3>Machu Picchu, Peru</h3>
+        <p>An ancient Incan city set high in the Andes Mountains.</p>
+      </div>
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyZNNf7fYHdFgpbPnmLuHa23SwcnjK1T97sQ&s"  onclick="redirectTo('Chinchen.html')" alt="Chichen Itza">
+        <h3>Chichen Itza, Mexico</h3>
+        <p>A large pre-Columbian archaeological site.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-imgix.headout.com/microbrands-content-image/image/e4e2b84ff4e7f818201b1143c7da369e-Colosseum.jpg"  onclick="redirectTo('coloosm.html')"alt="Roman Colosseum">
+        <h3>Colosseum, Italy</h3>
+        <p>An iconic symbol of ancient Rome.</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/640px-Taj_Mahal_%28Edited%29.jpeg" alt="Taj Mahal">
+        <h3>Taj Mahal, India</h3>
+        <p>A white marble mausoleum in Agra, India.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Destinations Section -->
+<section id="destinations">
+  <div class="container">
+    <h2>Popular Destinations 🏖️</h2>
+    <p>Explore the world’s most famous places.</p>
+    <h3 onclick="redirectTo('gratewall of china.html')">Great Wall of China  </h3>
+    <h3 onclick="redirectTo('petra.html')">petra </h3>
+    <h3 onclick="redirectTo('christ.html')">Christ the Redeemer</h3> 
+    <h3  onclick="redirectTo('machupichu.html')"> machu picchu</h3>
+    <h3  onclick="redirectTo('Chinchen.html')">Chichen  itza</h3>
+    <h3  onclick="redirectTo('coloosm.html')">Colosseum </h3>
+    <h3  onclick="redirectTo('tajmahal.html')"> Taj Mahal </h3>
+  </div>
+</section>
+
+<!-- Tours Section -->
+<section id="tours">
+  <div class="container">
+    <h2>Travel Packages ✈️</h2>
+    <p>Find the best travel deals and packages.</p>
+    <h3 onclick="window.location.href='grate wall of china html'">Great Wall of China  </h3>
+    <h3 onclick="redirectTo('petra.html')">petra </h3>
+    <h3 onclick="redirectTo('christ.html')">Christ the Redeemer</h3> 
+    <h3  onclick="redirectTo('machupichu.html')"> machu picchu</h3>
+    <h3  onclick="redirectTo('Chinchen.html')">Chichen  itza</h3>
+    <h3  onclick="redirectTo('coloosm.html')">Colosseum </h3>
+    <h3  onclick="redirectTo('tajmahal.html')"> Taj Mahal </h3>
+
+  </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about">
+  <div class="container">
+    <h2>Contact Us 📞</h2>
+    <p>Email: <a href="mailto:contact@exploreworld.com">contact@exploreworld.com</a></p>
+    <p>Phone: +91 98765 43210</p>
+  </div>
+</section>
+
+<!-- Footer -->
+
+
+<script>
+  function showSection(sectionId) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => section.classList.remove('active'));
+    document.getElementById(sectionId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
